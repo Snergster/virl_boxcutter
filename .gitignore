@@ -1,0 +1,6 @@
+*~
+*.pem
+minion.pub
+.vagrant/
+salt/extra.conf
+salt/extra.conf.orig
