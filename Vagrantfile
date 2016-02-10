@@ -51,9 +51,9 @@ Vagrant.configure(2) do |config|
   #   vb.memory = "1024"
   # end
   #
+  #cp -f /vagrant/salt/minion.pem /etc/salt/pki/minion.pem
 
 $keys = <<SCRIPT
-cp -f /vagrant/salt/minion.pem /etc/salt/pki/minion.pem
 openssl rsa -in /vagrant/salt/minion.pem -pubout >> /etc/salt/pki/minion/minion.pub
 cp -f /vagrant/salt/master_sign.pub /etc/salt/pki/minion
 SCRIPT
@@ -75,7 +75,6 @@ SCRIPT
   cp -f /vagrant/extra.conf /etc/salt/minion.d/box.conf
   SHELL
 
-  config.vm.provision "shell", inline: $keys
   
     config.vm.provision :salt do |salt|
 
@@ -88,6 +87,8 @@ SCRIPT
       salt.run_highstate = false
 
     end
+
+  config.vm.provision "shell", inline: $keys
 
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
   sudo salt-call state.sls virl.terraform.install
