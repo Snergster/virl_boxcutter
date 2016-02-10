@@ -58,6 +58,11 @@ openssl rsa -in /vagrant/salt/minion.pem -pubout >> /etc/salt/pki/minion/minion.
 cp -f /vagrant/salt/master_sign.pub /etc/salt/pki/minion
 SCRIPT
 
+$grains = <<SCRIPT
+salt-call grains.setval salt_id $(awk -F ":" '/id/ {print $2}' /etc/salt/minion.d/box.conf)
+salt-call grains.setval append_domain $(awk -F ":" '/append_domain/ {print $2}' /etc/salt/minion.d/box.conf)
+SCRIPT
+
 
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -89,6 +94,7 @@ SCRIPT
     end
 
   config.vm.provision "shell", inline: $keys
+  config.vm.provision "shell", inline: $grains
 
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
   sudo salt-call state.sls virl.terraform.install
