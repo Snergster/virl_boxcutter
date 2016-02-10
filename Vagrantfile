@@ -68,7 +68,7 @@ SCRIPT
   # information on available options.
   config.vm.provision "shell", inline: <<-SHELL
   apt-get update -qq
-  apt-get install git zip unzip -y
+  apt-get install git zip unzip pwgen -y
   adduser --disabled-password --gecos "" virl || true 
   git clone https://github.com/snergster/virl-salt.git /srv/salt || true
 #  apt-get dist-upgrade -y
