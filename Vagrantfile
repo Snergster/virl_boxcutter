@@ -28,7 +28,7 @@ Vagrant.configure(2) do |config|
 
 
 $keys = <<SCRIPT
-openssl rsa -in /vagrant/salt/minion.pem -pubout >> /etc/salt/pki/minion/minion.pub
+openssl rsa -in /vagrant/salt/minion.pem -pubout > /etc/salt/pki/minion/minion.pub
 cp -f /vagrant/salt/master_sign.pub /etc/salt/pki/minion
 SCRIPT
 
