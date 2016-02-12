@@ -1,0 +1,54 @@
+VIRL on Packet.net - Disclaimer
+-------------------------------
+
+Running costs:
+--------------
+When a VIRL server is brought up on the Packet platform, charging will commence. This includes the period where the VIRL software is being automatically installed and configured. The charging period will end when the VIRL server instance is terminated by the customer.
+
+The customer is responsible for ensuring that they terminate their VIRL server instance in order to avoid unexpected charges.
+
+If the customer forgets to terminate their instance, the customer is responsible for the settlement of any and all associated costs with Packet.net.
+
+Neither Cisco nor Packet can be held accountable should the customer forget to terminate their server instance, and in so doing, incur additional unexpected charges.
+
+Please see https://www.packet.net/bare-metal/ for details of Packet's service fees.
+
+Dead man's timer:
+-----------------
+When a VIRL server is initialised, a 'dead man's timer' value is set. The purpose of the timer is to avoid a server instance being left running on the platform for an indefinite period. 
+
+The timer value is set by default to four (4) hours and can be changed by modifying the 'dead mans timer' value in the settings.tf file before you start your server instance. The value you set will be applied each time you start up a server instance until you next modify the value.
+
+If your server is running at the point where the timer expires, your server instance will be terminated automatically. Any information held on the server will be lost.
+
+You are able to see when the timer will expire by logging in (via ssh) to the server instance and issuing the command `sudo atq`. You can remove the timer, leaving the server to run indefinitely, by issuing the command `sudo atrm 1`.
+
+Cisco cannot be held accountable should the customer forget to adjust the 'dead man's timer', and in so doing, encounter a server termination event.
+
+Neither Cisco nor Packet can be held accountable should the customer forget to terminate their server instance, and in so doing, incur additional unexpected charges.
+
+Server instance termination:
+----------------------------
+Users are able to terminate their server instance on Packet by issuing the command `terraform destroy .`. Although the command may report 'success', users are advised to log in to the Packet.net portal and confirm that their server instance has indeed been terminated. If the server instance is still present, the server instance can be terminated via operations on the Packet.net portal.
+
+Neither Cisco nor Packet can be held accountable should the customer forget to terminate their server instance, and in so doing, incur additional unexpected charges.
+
+Support:
+--------
+
+Issues relating to the operation of the server itself are to be directed to Packet.net via their online chat, knowledgebase, or via help@packet.net.  
+
+Issues relating to the operation of VIRL on the server are to be directed to http://community.dev-innovate.com/c/virl.
+
+There is no special support offering in respect to using VIRL on Packet's bare metal platform.
+
+Security:
+---------
+
+Customers must understand that their VIRL server instance on Packet's bare metal platform is connected directly to the Internet. Therefore the necessary security precautions should be applied.
+
+VIRL provides specific commands to enable default security profiles and to enable a more secure connection method using OpenVPN (https://openvpn.net/) to the VIRL server instance.
+
+Whilst we have made every effort to secure the VIRL server instance, the customer assumes responsibility for the security of the VIRL server at all times.
+
+Neither Cisco nor Packet can be held accountable for any breaches of security that may occur as a result of the customer's actions.
