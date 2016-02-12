@@ -33,8 +33,8 @@ cp -f /vagrant/salt/master_sign.pub /etc/salt/pki/minion
 SCRIPT
 
 $grains = <<SCRIPT
-salt-call grains.setval salt_id $(awk -F ":" '/id/ {print $2}' /etc/salt/minion.d/box.conf)
-salt-call grains.setval append_domain $(awk -F ":" '/append_domain/ {print $2}' /etc/salt/minion.d/box.conf)
+salt-call grains.setval salt_id $(awk -F ":" '/id/ {print $2}' /etc/salt/minion.d/id.conf)
+salt-call grains.setval append_domain $(awk -F ":" '/append_domain/ {print $2}' /etc/salt/minion.d/id.conf)
 SCRIPT
 
 
@@ -44,7 +44,7 @@ SCRIPT
   apt-get update -qq
   apt-get install git zip unzip pwgen -y
   adduser --disabled-password --gecos "" virl || true 
-  git clone https://github.com/snergster/virl-salt.git /srv/salt || true
+  git clone --depth 1 https://github.com/snergster/virl-salt.git /srv/salt || true
 #  apt-get dist-upgrade -y
   mkdir -p /etc/salt/pki/minion
   mkdir -p /etc/salt/minion.d
