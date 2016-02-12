@@ -2,6 +2,5 @@
 *.pem
 minion.pub.orig
 .vagrant/
-salt/extra.conf
-salt/extra.conf.orig
 settings.tf
+id.conf
