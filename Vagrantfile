@@ -85,7 +85,6 @@ SCRIPT
 
       salt.masterless = false
       salt.minion_config = "salt/minion"
-      salt.run_highstate = true
       salt.bootstrap_options = "-P"
       salt.minion_key = "salt/minion.pem"
       salt.minion_pub = "salt/minion.pub"
@@ -101,5 +100,9 @@ SCRIPT
   sudo salt-call state.sls virl.terraform.virl_packet_vagrant
   sudo salt-call state.sls virl.terraform.virl_cluster_vagrant
   /usr/local/bin/noprompt-ssh-keygen
+  cp -f /vagrant/settings.tf /home/vagrant/virl_packet/settings.tf
+  cp -f /vagrant/settings.tf /home/vagrant/virl_cluster/settings.tf
+  #cd /home/vagrant/virl_packet; terraform apply .
+  #cd /home/vagrant/virl_cluster; terraform apply .
   SHELL
 end
