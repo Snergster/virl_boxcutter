@@ -46,7 +46,7 @@ Vagrant offer free plugin support for Virtualbox and for Vmware AppCatalyst. Oth
 
    `vagrant ssh`
    
-   WINDOWS USERS - you must have an SSH client installed. Information from Vagrant will provide directions on how to connect to the 'virl_boxcutter' VM from your SSH client.
+   WINDOWS USERS - you must have an SSH client installed. Information from Vagrant will provide directions on how to connect to the 'virl_boxcutter' VM from your SSH client. If you are prompted for a password, the password is 'vagrant'.
    
 14. Go into the 'virl_packet' directory using the command:
 
