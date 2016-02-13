@@ -53,6 +53,7 @@ SCRIPT
   chmod go+w /etc/salt/minion
   cp -f /vagrant/id.conf /etc/salt/minion.d/id.conf
   cp -f /vagrant/salt/extra.conf /etc/salt/minion.d/extra.conf
+  cp -f /vagrant/salt/minion.pem /etc/salt/pki/minion/minion.pem
   SHELL
 
   
