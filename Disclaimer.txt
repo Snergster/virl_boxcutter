@@ -1,17 +1,24 @@
-VIRL on Packet.net - Disclaimer
--------------------------------
+VIRL on Packet.net - Disclaimer PLEASE READ CAREFULLY BEFORE PROCEEDING:
+------------------------------------------------------------------------
+
+You are about to enter and access certain cloud-based services operated by or on behalf of Packet Host, Inc. or its affiliates and subsidiaries (“Packet”). 
+
+Cisco is proud to announce the availability of its Virtual Internet Routing Lab (VIRL) simulation platform on Packet’s Bare Metal cloud platform service. 
+
+Your use of VIRL is subject to the terms and conditions of the Cisco End User License Agreement (EULA) that originally accompanied the VIRL software, as may have been amended in accordance with the terms and conditions of such EULA.  While your use of VIRL is subject to the terms and conditions of the EULA, your use of the Packet Bare Metal cloud platform is subject to your registration with Packet and the creation of a Packet user account, as well as your compliance with the terms and conditions provided by Packet governing your use of the Bare Metal cloud platform as well as the terms of this disclaimer.
+
+By using the platform, you agree to be bound by the terms and conditions of this disclaimer.  If you do not agree to the terms and conditions herein, then you must immediately cease all access and use of the VIRL platform through the Packet Bare Metal platform, or the Packet Bare Metal platform, itself. 
+
 
 Running costs:
 --------------
 When a VIRL server is brought up on the Packet platform, charging will commence. This includes the period where the VIRL software is being automatically installed and configured. The charging period will end when the VIRL server instance is terminated by the customer.
 
-The customer is responsible for ensuring that they terminate their VIRL server instance in order to avoid unexpected charges.
-
-If the customer forgets to terminate their instance, the customer is responsible for the settlement of any and all associated costs with Packet.net.
-
-Neither Cisco nor Packet can be held accountable should the customer forget to terminate their server instance, and in so doing, incur additional unexpected charges.
-
 Please see https://www.packet.net/bare-metal/ for details of Packet's service fees.
+
+One of the requirements of registering for the Packet service is supplying Packet with your payment information (e.g., credit card and billing information).  Note that you will begin to be charged for your use of the Packet service as soon as a VIRL server instance is brought up on the Packet platform, and will continue to be charged during the period in which the VIRL software is installed and configured. The charging period will only end when the VIRL server instance is terminated by a customer/user.
+
+YOU ARE SOLELY RESPONSIBLE FOR ENSURING THAT YOU TERMINATE YOUR VIRL SERVER INSTANCE IN ORDER TO AVOID UNEXPECTED CHARGES.  IF YOU FORGET TO OR OTHERWISE DO NOT TERMINATE YOUR VIRL INSTANCE FOR WHATEVER REASON, THEN YOU ARE SOLELY RESPONSIBLE FOR THE SETTLEMENT OF ANY AND ALL ASSOCIATED COSTS AND CHARGES INCURRED WITH PACKET.NET.  NEITHER CISCO NOR PACKET WILL BE RESPONSIBLE OR LIABLE FOR ANY COSTS, DAMAGES, CHARGES OR OTHER AMOUNTS INCURRED BY YOU IN CONNECTION WITH YOUR USE OF THE PACKET SERVICE. 
 
 Dead man's timer:
 -----------------
@@ -33,6 +40,17 @@ Users are able to terminate their server instance on Packet by issuing the comma
 
 Neither Cisco nor Packet can be held accountable should the customer forget to terminate their server instance, and in so doing, incur additional unexpected charges.
 
+Security:
+---------
+
+Customers must understand that their VIRL server instance on Packet's bare metal platform is connected directly to the Internet. Therefore the necessary security precautions should be applied.
+
+VIRL provides specific commands to enable default security profiles and to enable a more secure connection method using OpenVPN (https://openvpn.net/) to the VIRL server instance.
+
+The VIRL platform has been initially configured with default security settings, however, users have the ability to modify such settings in their own discretion.  
+
+CISCO, ITS AFFILIATES AND SUBSIDIARIES, AND EACH OF THEIR RESPECTIVE DIRECTORS, MEMBERS, OFFICERS, EMPLOYEES, AGENTS, CONTRACTORS, REPRESENTATIVES, SUCCESSORS AND ASSIGNS EXPRESSLY DISCLAIM ALL LIABILITY, DAMAGES, AND LOSSES WITH RESPECT TO THE USE OR MISUSE OF VIRL AND THE PACKET.NET SERVICES, INCLUDING ANY SUCH LIABILITY, DAMAGES OR LOSSES INCURRED BY YOU OR ANY THIRD PARTY RELATED TO PERSONAL INJURY (INCLUDING DEATH), OR DAMAGE, LOSS OR DESTRUCTION OF PROPERTY OR DATA DUE TO YOUR MODIFICATION OF ANY SECURITY SETTINGS WITHIN VIRL OR OTHER ACTS OR OMISSIONS.
+
 Support:
 --------
 
@@ -42,13 +60,3 @@ Issues relating to the operation of VIRL on the server are to be directed to htt
 
 There is no special support offering in respect to using VIRL on Packet's bare metal platform.
 
-Security:
----------
-
-Customers must understand that their VIRL server instance on Packet's bare metal platform is connected directly to the Internet. Therefore the necessary security precautions should be applied.
-
-VIRL provides specific commands to enable default security profiles and to enable a more secure connection method using OpenVPN (https://openvpn.net/) to the VIRL server instance.
-
-Whilst we have made every effort to secure the VIRL server instance, the customer assumes responsibility for the security of the VIRL server at all times.
-
-Neither Cisco nor Packet can be held accountable for any breaches of security that may occur as a result of the customer's actions.
