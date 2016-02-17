@@ -56,13 +56,20 @@ Vagrant offer free plugin support for Virtualbox and for Vmware AppCatalyst. Oth
 
 16. Review the 'Disclaimer.txt' file for operating rules. 
 
-17. Run the command 
+17. Before bringing up your VIRL server, log into to app.packet.net and click 'Manage'. You need to ensure that there are no active projects present. If there are active projects:
+
+    1. Click on the name of your project listed
+    2. Select "Settings" tab
+    3. Scroll to the bottom of the page and click on the button to delete the project 
+
+
+18. Run the command 
 
    `terraform plan .`
    
    This will validate the terraform .tf file.
    
-18. Run the command 
+19. Run the command 
 
    `terraform apply .`     
    
@@ -72,13 +79,13 @@ Vagrant offer free plugin support for Virtualbox and for Vmware AppCatalyst. Oth
     
    NOTE - the VIRL server will reboot once the VIRL software has been installed. You must therefore wait until the reboot has completed before logging in.
 
-19. To see more information about your Remote VIRL server, run the command 
+20. To see more information about your Remote VIRL server, run the command 
 
    `terraform show` 
    
    The output will provided details of your Remote VIRL server instance.
 
-20. The VIRL server is provisioned in a secure manner. To access the server, you must establish an OpenVPN tunnel to the server.
+21. The VIRL server is provisioned in a secure manner. To access the server, you must establish an OpenVPN tunnel to the server.
     1. Install an OpenVPN compliant client for your system.
     2. The set up of the remote VIRL server will automatically configure the OpenVPN server. The 'client.ovpn' connection profile will be automatically downloaded to the directory on the 'virl_boxcutter' VM from where you ran the `terraform apply .` command. 
     3. The 'client.ovpn' file can be copied out to other devices, such as a laptop hosting your local VIRL instance.
@@ -86,19 +93,19 @@ Vagrant offer free plugin support for Virtualbox and for Vmware AppCatalyst. Oth
 
     NOTE - the VIRL server will reboot once the VIRL software has been installed. You must therefore wait until the reboot has completed before bringing up the OpenVPN tunnel.
     
-21. With your OpenVPN tunnel up from your workstation or laptop, the VIRL server is available at http://172.16.11.254.
+22. With your OpenVPN tunnel up from your workstation or laptop, the VIRL server is available at http://172.16.11.254.
     If using VM Maestro, you must set up the connection profile to point to `172.16.11.254`
 
-22. When you're ready to terminate your remote VIRL server instance, on your 'virl_boxcutter' VM, issue the command 
+23. When you're ready to terminate your remote VIRL server instance, on your 'virl_boxcutter' VM, issue the command 
  
     `terraform destroy .`
 
-23. To terminate your 'virl_boxcutter' VM type the commands:
+24. To terminate your 'virl_boxcutter' VM type the commands:
 
    `exit'
    `vagrant halt`
 
-24. Log in to the Packet.net portal
+25. Log in to the Packet.net portal
    1. Review the 'Manage' tab to confirm that the server instance has indeed been deleted and if necessary, delete the server
    2. Review the 'SSH Keys' tab and remove any ssh keys that are registered
 
