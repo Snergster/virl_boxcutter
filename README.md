@@ -100,6 +100,12 @@ Vagrant offer free plugin support for Virtualbox and for Vmware AppCatalyst. Oth
  
     `terraform destroy .`
 
+    Ensure that all projects are successfully terminated by logging into to app.packet.net and click 'Manage'. If there are active projects:
+
+    1. Click on the name of your project listed
+    2. Select "Settings" tab
+    3. Scroll to the bottom of the page and click on the button to delete the project 
+
 24. To terminate your 'virl_boxcutter' VM type the commands:
 
    `exit'
