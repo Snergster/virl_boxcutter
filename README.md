@@ -88,8 +88,8 @@ Vagrant offer free plugin support for Virtualbox and for Vmware AppCatalyst. Oth
 21. The VIRL server is provisioned in a secure manner. To access the server, you must establish an OpenVPN tunnel to the server.
     1. Install an OpenVPN compliant client for your system.
     2. The set up of the remote VIRL server will automatically configure the OpenVPN server. The 'client.ovpn' connection profile will be automatically downloaded to the directory on the 'virl_boxcutter' VM from where you ran the `terraform apply .` command. 
-    3. The 'client.ovpn' file can be copied out to other devices, such as a laptop hosting your local VIRL instance.
-    4. Download the file and open it with your OpenVPN client
+    3. The 'client.ovpn' file can be copied out to other devices, such as a laptop hosting your local VIRL instance. You can copy the file to the '/vagrant' directory using the command `cp client.ovpn /vagrant/`. The file is then available on your laptop in the directory from which you issued the command 'vagrant up'.
+    4. Open the 'client.ovpn' file with your OpenVPN client to bring up the tunnel to your VIRL server.
 
     NOTE - the VIRL server will reboot once the VIRL software has been installed. You must therefore wait until the reboot has completed before bringing up the OpenVPN tunnel.
     
