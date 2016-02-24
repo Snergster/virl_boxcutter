@@ -25,6 +25,9 @@ Vagrant.configure(2) do |config|
   #
   
   config.vm.box = "boxcutter/ubuntu1404"
+# If you need 32bit version comment out the line above and remove comment below
+#  config.vm.box = "boxcutter/ubuntu1404-i386"
+
   config.vm.boot_timeout = 600
 
 $keys = <<SCRIPT
