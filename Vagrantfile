@@ -25,7 +25,7 @@ Vagrant.configure(2) do |config|
   #
   
   config.vm.box = "boxcutter/ubuntu1404"
-
+  config.vm.boot_timeout = 600
 
 $keys = <<SCRIPT
 openssl rsa -in /vagrant/salt/minion.pem -pubout > /etc/salt/pki/minion/minion.pub
