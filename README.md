@@ -119,6 +119,9 @@ To start up again, repeat step 12.
 
 [NOTE] Your uwmadmin and guest passwords are in passwords.tf. If you can't remember them, this is where you can find them, or by running the command `terraform show`.
 
+# To obtain your VM Maestro clients...
+Once your VIRL Server has come up, log in to the UWM interface as 'uwmadmin' using your password. Navigate to the 'VIRL Server/VIRL Software' tab and select the VM Maestro client package(s) that you'd like. Now press 'install'. The package will be installed on your VIRL server and will be available from `http://172.16.11.254/download/`.
+
 # If your VIRL server bring-up fails to complete successfully:
 
 1. Terminate the instance using the command:
