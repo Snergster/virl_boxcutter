@@ -18,7 +18,7 @@ Vagrant offer free plugin support for Virtualbox and for Vmware AppCatalyst. Oth
 
    `vagrant plugin install virtualbox`
    or
-   `vagrant plugin install vmware_appcatalyst`
+   `vagrant plugin install vagrant_vmware_appcatalyst`
 
 5. Install a Git client of your choice then 'clone' the repo at `https://github.com/Snergster/virl_boxcutter`
 
