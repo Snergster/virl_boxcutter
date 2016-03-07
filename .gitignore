@@ -4,3 +4,4 @@ minion.pub.orig
 .vagrant/
 settings.tf
 id.conf
+.bundle*
