@@ -34,7 +34,7 @@ Vagrant offer free plugin support for Virtualbox and for Vmware AppCatalyst. Oth
 
 10. Make a copy of the 'settings.tf.orig' and call it 'settings.tf'.
 
-11. Edit the 'settings.tf' file. Replace the packet_api 'default' field with your packet_api_key. You can also adjust the 'dead_mans_timer' value and the 'packet_machine_type' that will be used with the VIRL server is created.
+11. Edit the 'settings.tf' file. Replace the packet_api 'default' field with your packet_api_key. You can also adjust the 'dead_mans_timer' value and the 'packet_machine_type' that will be used with the VIRL server is created. In addition, you can select where you want your VIRL server to be hosted from the available Packet.net data centers. EWR1 == New York, SJC1 == San Jose, CA, AMS1 == Amsterdam. Instructions in the settings.tf file will guide you to the changes that you need to make.
 
 12. From a command window, go into the 'virl_boxcutter' directory and run the following command:
 
