@@ -12,3 +12,19 @@ variable "dead_mans_timer" {
 	description = "number of hours before your server is shut down and deleted "
     default = "4"
 }
+
+variable "packet_location" {
+	description = "Pick from available Packet.net data center locations: ewr1==New York, sjc1==San Jose,CA, ams1==Amsterdam"
+	default = "ewr1"
+}
+
+variable "salt_master" {
+	description = "Name or IP address of salt master. Replace with sjc-packet-1.virl.info or ams-packet-1.virl.info if using one of the other Packet.net locations"
+	default = "ewr-packet-1.virl.info"
+}
+
+# By default we automatically create a new project each time, if you dont want this, insert project id and change the two variables highlighted in virl.tf
+variable "packet_project_id" {
+	description = "After you create packet project, get your api key, then get your project id key via https://app.packet.net/portal#/projects/list/table "
+    default = "bad_project_id"
+}
