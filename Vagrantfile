@@ -64,9 +64,11 @@ SCRIPT
 
       salt.masterless = false
       salt.minion_config = "salt/minion"
-      salt.bootstrap_options = "-P git 2015.8"
+      salt.bootstrap_options = "-P"
+      salt.version = "2015.8"
+      salt.install_type = "stable"
 # If you need 32bit version comment out the line above and remove comment below
-#      salt.bootstrap_options = "-P git 2015.8"
+#      salt.install_type = "git"
       salt.minion_key = "salt/minion.pem"
       salt.minion_pub = "salt/minion.pub"
       salt.run_highstate = false
