@@ -43,6 +43,8 @@ SCRIPT
 
   # View the documentation for the provider you are using for more
   # information on available options.
+config.vm.box_version = "2.0.22"
+
   config.vm.provision "shell", inline: <<-SHELL
   apt-get update -qq
   apt-get install git zip unzip pwgen -y
