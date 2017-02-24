@@ -1,6 +1,6 @@
 THIS DOCUMENT IS FOR USERS WHO WANT TO RUN 'VIRL on PACKET' DIRECTLY FROM THEIR WORKSTATION/LAPTOP. YOU MUST HAVE A VALID VIRL LICENSE KEY. IF YOU WISH TO RUN 'VIRL on PACKET' FROM YOUR VIRL SERVER, PLEASE SEE 'https://github.com/Snergster/virl_packet/blob/master/salt.README.md'
 
-Virl_boxcutter is a self-contained 'launcher' virtual machine image, used to bring up a VIRL Server on the Packet.net platform. You do NOT need to have VIRL installed on your workstation or laptio. The launcher uses Vagrant (from Hashicorp) to control the operation of the 'launcher VM'. 
+Virl_boxcutter is a self-contained 'launcher' virtual machine image, used to bring up a VIRL Server on the Packet.net platform. You do NOT need to have VIRL installed on your workstation or laptop. The launcher uses Vagrant (from Hashicorp) to control the operation of the 'launcher VM'. 
 
 Vagrant offer free plugin support for Virtualbox and for Vmware AppCatalyst. Other plugins are provided at a cost.
 
